@@ -1,0 +1,125 @@
+main > * {
+    box-sizing: border-box;
+    margin: 0;
+   
+}
+
+
+main {
+    color: white;
+    font-size: 70px;
+    text-align: center;
+    font-family: Tahoma;
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(12, 1fr); /* Repartimos todo en 12 columnas fraccionando en cada una*/
+    grid-template-rows: 150px 300px 300px 100px; /* Las medidas de cada una de las filas */
+}
+
+/* Daremos a todas las section un display flex para el contenido dentro vaya acomodandose de forma flex*/
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+section:nth-child(1) {
+        grid-column: 1 / 13; /*Indicaremos desde que columna inicia y hasta cuál termina el primer section*/
+        background-color: #F7E84F;
+    }
+
+section:nth-child(2) {
+        background-color: #54CAE7;
+        grid-column:  1 / 4; /* Indicamos desde que columna inicia nuestra segunda section y donde termina y repetimos con las demás*/
+    }
+
+section:nth-child(3) {
+        background-color: #ED37AB;
+        grid-column: 4 / 7;
+        
+    }
+
+section:nth-child(4) {
+        background-color: #FAB755;
+        grid-column: 7 / 10;
+        
+    }
+
+section:nth-child(5) { /*H*/
+        background-color: #E887E4;
+        grid-column: 10 / 13;
+        grid-row: 2 / 4;
+        
+    }
+
+section:nth-child(6) {
+        background-color: #F2585D;
+        grid-column:  1 / 4;
+    }
+
+section:nth-child(7) {
+        background-color: #1BEFBE;
+        grid-column: 4 / 7;
+        
+    }
+
+section:nth-child(8) {
+        background-color: #8CE460;
+        grid-column: 7 / 10;
+        
+    }
+
+@media only screen and (max-width: 768px){
+    div:nth-child(1) {
+        background-color: yellow;
+        grid-column: 1 / 13;
+    }
+
+    section:nth-child(2) {
+        background-color: cyan;
+        grid-column: 1 / 5;
+        
+    }
+
+    section:nth-child(3) {
+        background-color: yellow;
+        grid-column: 5 / 9;
+        
+    }
+
+    section:nth-child(4) {
+            background-color: purple;
+            grid-column: 9 / 13;
+            
+        }
+
+    section:nth-child(5) { /*H*/
+            background-color: blue;
+            grid-column: 1 / 13;
+            grid-row: 4 / 4;
+            
+        }
+
+    section:nth-child(6) {
+            background-color: green;
+            grid-column:  1 / 5;
+        }
+
+    section:nth-child(7) {
+            background-color: yellow;
+            grid-column: 5 / 9;
+            
+        }
+
+    section:nth-child(8) {
+            background-color: purple;
+            grid-column: 9 / 13;
+            
+        }
+}
